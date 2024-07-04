@@ -4,25 +4,25 @@ function addNewTask() {
     const inputElement = document.getElementById('task-input');
     const inputValue = inputElement.value.trim(); // Obtendo o valor do input e removendo espaços em branco extras
 
-    // Verifica se o valor do input não está vazio
+    // Checking if the input it's not empety
     if (inputValue !== "") {
-        // Container de tarefas
+        // Task Container (getting by id)
         const tasksContainer = document.getElementById('tasks-container');
 
-        // Criação da nova linha (row)
+        // Creating a new line
         const newRow = document.createElement('div');
         newRow.classList.add('row', 'my-3');
 
-        // Criação da coluna principal (col-10)
+        // Creating a new Column
         const newCol = document.createElement('div');
         newCol.classList.add('col-10', 'p-3');
 
-        // Criação do título (h5) para a tarefa
+        // Creating heading element for tasks and inserting the input value
         const newHeading = document.createElement('h5');
         newHeading.classList.add('mx-3', 'my-2');
         newHeading.textContent = inputValue;
 
-        // Adiciona o título à coluna principal
+        // Adding the title for the new Column
         newCol.appendChild(newHeading);
 
         // Criação da coluna do botão (col-2)
